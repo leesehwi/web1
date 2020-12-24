@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hwi's Clothes - TEE</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+<a href = index.html><img src = "lsh_logo.png" id = "logo" width =150px height = 50px align = "left"></a>
+  <br><br>
+<script>
+    function changeImage1(){
+        var image = document.getElementById('logo');
+        if (image.src.match("lsh_logo.png")) {
+            image.src = "lsh_logo2.png";
+        }
+      }
+    function changeImage2(){
+        var image = document.getElementById('logo');
+        if (image.src.match("lsh_logo2.png")) {
+            image.src = "lsh_logo.png";
+        }
+      }
+  </script>
+  <ol>
+    <strong><u>
+    <li><a href = "outher.html">OUTER</a></li>
+    <li><a href = "tee.html">TEE</a></li>
+    <li><a href = "bottom.html">bottom</a></li>
+    </u></strong>
+  </ol>
+  <input type = "button" value ="Dark Mode" onclick = "
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    changeImage1();
+  ">
+
+  <input type = "button" value ="White Mode" onclick ="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    changeImage2();
+  ">
+<p></p>
+<div><img src = "img\tee\tee1.jpg"width = 450px height = 450px></div>
+<br>
+디스이즈 네버뎃 맨투맨 입니다.
+
+
+</body>
