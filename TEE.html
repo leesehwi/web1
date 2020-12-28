@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Hwi's Clothes - TEE</title>
+  <meta charset="utf-8">
+  <script>
+  function modeswitch(self){
+    var varbody = document.querySelector('body');
+    var varlogo = document.getElementById('logo');
+    var alist = document.querySelectorAll('a');
+      if(self.value ==='Dark Mode'){
+        varbody.style.backgroundColor = 'black';
+        varbody.style.color = 'white';
+        self.value = 'White Mode';
+        varlogo.src = 'lsh_logo2.png';
+        var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i+1;
+          }
+        }
+      else{
+        varbody.style.backgroundColor = 'white';
+        varbody.style.color = 'black';
+        self.value = 'Dark Mode';
+        varlogo.src = 'lsh_logo.png';
+        var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'black';
+            i = i+1;
+          }
+        }
+      }
+    </script>
+</head>
+
+<style>
+.button{
+  width : 170px;
+  height : 50px;
+}
+</style>
+
+<body>
+<a href = "index.html"><img id = "logo" src = "lsh_logo.png"  width =150px height = 50px align = "left"></a>
+<br><br>
+<ul>
+  <strong>
+    <script>
+      var clothestype = ['OUTER','TEE','BOTTOM'];
+      var i = 0;
+      while(i < clothestype.length){
+        document.write('<li><a href ="'+clothestype[i]+'.html" style="color:Black">'+clothestype[i]+'</a></li>');
+      i = i+1;
+      }
+    </script>
+  </strong>
+</ul>
+
+<input id = "Modeexchanger" class = "button"  type="button" value="Dark Mode" onclick="modeswitch(this);">
+
+<p></p>
+<div><img src = "img\tee\tee1.jpg"width = 450px height = 450px></div>
+<br>
+디스이즈 네버뎃 맨투맨 입니다.
+
+</body>
+</html>
