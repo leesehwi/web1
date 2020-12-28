@@ -1,49 +1,69 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Hwi's Clothes - BOTTOM</title>
   <meta charset="utf-8">
+  <script>
+  function modeswitch(self){
+    var varbody = document.querySelector('body');
+    var varlogo = document.getElementById('logo');
+    var alist = document.querySelectorAll('a');
+      if(self.value ==='Dark Mode'){
+        varbody.style.backgroundColor = 'black';
+        varbody.style.color = 'white';
+        self.value = 'White Mode';
+        varlogo.src = 'lsh_logo2.png';
+        var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i+1;
+          }
+        }
+      else{
+        varbody.style.backgroundColor = 'white';
+        varbody.style.color = 'black';
+        self.value = 'Dark Mode';
+        varlogo.src = 'lsh_logo.png';
+        var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'black';
+            i = i+1;
+          }
+        }
+      }
+    </script>
 </head>
 
-<body>
-<a href = index.html><img src = "lsh_logo.png" id = "logo" width =150px height = 50px align = "left"></a>
-  <br><br>
-<script>
-    function changeImage1(){
-        var image = document.getElementById('logo');
-        if (image.src.match("lsh_logo.png")) {
-            image.src = "lsh_logo2.png";
-        }
-      }
-    function changeImage2(){
-        var image = document.getElementById('logo');
-        if (image.src.match("lsh_logo2.png")) {
-            image.src = "lsh_logo.png";
-        }
-      }
-  </script>
-  <ol>
-    <strong><u>
-    <li><a href = "outher.html">OUTER</a></li>
-    <li><a href = "tee.html">TEE</a></li>
-    <li><a href = "bottom.html">bottom</a></li>
-    </u></strong>
-  </ol>
-  <input type = "button" value ="Dark Mode" onclick = "
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    changeImage1();
-  ">
+<style>
+.button{
+  width : 170px;
+  height : 50px;
+}
+</style>
 
-  <input type = "button" value ="White Mode" onclick ="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-    changeImage2();
-  ">
+<body>
+<a href = index.html><img id = "logo" src = "lsh_logo.png"  width =150px height = 50px align = "left"></a>
+<br><br>
+<ul>
+  <strong>
+    <script>
+    var clothestype = ['OUTER','TEE','BOTTOM'];
+    var i = 0;
+    while(i < clothestype.length){
+    document.write('<li><a href ="'+clothestype[i]+'.html" style="color:Black">'+clothestype[i]+'</a></li>');
+    i = i+1;
+    }
+    </script>
+  </strong>
+</ul>
+<input id = "Modeexchanger" class = "button"  type="button" value="Dark Mode" onclick="modeswitch(this)";>
+
 <p></p>
-<div><img src = "img\bottom\bottom1.jpg"width = 450px height = 450px></div>
+<div><img src = "img\bottom\bottom1.jpg" width = 450px height = 450px></div>
 <br>
 베이지색 바지 입니다.
 
 
 </body>
+</html>
