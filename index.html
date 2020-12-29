@@ -4,66 +4,32 @@
 <head>
   <title>Hwi's Clothes</title>
   <meta charset="utf-8">
-  <script>
-  function modeswitch(self){
-    var varbody = document.querySelector('body');
-    var varlogo = document.getElementById('logo');
-    var alist = document.querySelectorAll('a');
-      if(self.value ==='Dark Mode'){
-        varbody.style.backgroundColor = 'black';
-        varbody.style.color = 'white';
-        self.value = 'White Mode';
-        varlogo.src = 'lsh_logo2.png';
-        var i = 0;
-          while(i < alist.length){
-            alist[i].style.color = 'powderblue';
-            i = i+1;
-          }
-        }
-      else{
-        varbody.style.backgroundColor = 'white';
-        varbody.style.color = 'black';
-        self.value = 'Dark Mode';
-        varlogo.src = 'lsh_logo.png';
-        var i = 0;
-          while(i < alist.length){
-            alist[i].style.color = 'black';
-            i = i+1;
-          }
-        }
-      }
-    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src = "colors.js"></script>
+  <link rel = "stylesheet" href="style.css">
 </head>
 
-<style>
-.button{
-  width : 170px;
-  height : 50px;
-}
-</style>
 
 <body>
-<a href = index.html><img id = "logo" src = "lsh_logo.png"  width =150px height = 50px align = "left"></a>
-<br><br>
-<ul>
-  <strong>
-    <script>
-      var clothestype = ['OUTER','TEE','BOTTOM'];
-      var i = 0;
-      while(i < clothestype.length){
-        document.write('<li><a href ="'+clothestype[i]+'.html" style="color:Black">'+clothestype[i]+'</a></li>');
-        i = i+1;
-      }
-    </script>
-  </strong>
-</ul>
-<div><strong><a href = 'test.html' style = "text-decoration:none"> TEST</a></strong></div>
-
+<a href = "index.html"><img id = "logo" alt = "LSH LOGO" src = "lsh_logo.png"  width = 150px height = 50px align = "left"></a>
 <input id = "Modeexchanger" class = "button"  type="button" value="Dark Mode" onclick="modeswitch(this);">
 
-<p></p>
-<h2 style = "color:#0489B1;background-color:#BDBDBD">어서 오세요</h2>
-<div>세휘의 옷 입니다.</div>
-<img src ="main.jpg" width=900px hight =900px>
+<h6></h6>
+
+<div id = "grid">
+  <ul>
+    <strong>
+      <li><a href = "OUTER.html" class = 'CC'>OUTER</a></li>
+      <li><a href = "TEE.html" class = 'CC'>TEE</a></li>
+      <li><a href = "BOTOM.html" class = 'CC'>BOTOM</a></li>
+    </strong>
+  </ul>
+  <div>
+    <img src ="main1.jpg" alt = "mainimage1" width=880px height = 880px>
+  </div>
+  <div>
+    <img id = "main2" src ="main2.jpg" alt = "mainimage1" width=880px height = 880px>
+  </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,72 @@
+.button {
+  width : 140px;
+  height : 30px;
+  margin-top : 10px;
+  margin-left : 10px;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+a.CC:hover{
+  text-decoration: underline dotted 3px;
+
+}
+
+h6 {
+  border-bottom : 3px gray solid;
+  margin : 0;
+  margin-top : 10px;
+  padding : 0;
+}
+
+ul {
+  border-right : 3px gray solid;
+  margin : 0;
+  width :120px;
+  padding-top : 10px;
+  padding-left : 30px;
+  padding-right : 7px;
+  padding-bottom : 20px;
+
+}
+
+body {
+  margin : 0;
+}
+
+#grid{
+  display : grid;
+  grid-template-columns: 160px 880px 1fr;
+}
+
+#gridclothes{
+  display : grid;
+  grid-template-columns: 160px 220px 220px 1fr;
+}
+
+@media(max-width:1100px){
+  #main2{
+    display:none;
+  }
+}
+
+#imformation{
+    width:240px;
+  text-align : center;
+  font-family: samlip;
+}
+
+#clothesimg{
+  padding: 20px;
+  padding-bottom : 7px;
+}
+
+@font-face {
+    font-family: 'samlip';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
